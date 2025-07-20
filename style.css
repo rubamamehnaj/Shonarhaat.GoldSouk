@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base */
+body {
+    background: linear-gradient(135deg, #4a2d16);
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    line-height: 1.4;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #d5a806, #5e4d0c);
+    color: rgb(57, 43, 1);
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    z-index: 50;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+header h1,
+header h2 {
+    margin-bottom: 0.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: underline;
+    padding: 5px 10px;
+    font-size: 1rem;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+}
+
+.gold-price {
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+    color: #2e1b06bf;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.container h2 {
+    color: #f7e6a1;
+    margin: 1rem 0;
+}
+
+.container p {
+    color: rgb(210, 210, 210);
+    margin: 0.5rem 0;
+}
+
+.img {
+    width: 300px;
+    max-width: 80%;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Font Classes */
+.freehand-regular {
+    font-family: "Freehand", cursive;
+    font-weight: normal;
+    margin: 1rem 0;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+/* Product Grid (existing) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.product {
+    background: #b58f12;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.7);
+}
+
+.grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.grid p {
+    width: 100%;
+    margin: 10px auto;
+    color: #333;
+}
+
+/* Product Grid for Product Pages */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+}
+
+.product-card {
+    background: rgba(245, 222, 179, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    color: #f7e6a1;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.product-card p {
+    color: #e2d8b7;
+    font-size: 1rem;
+    margin: 0.3rem 0 0.8rem 0;
+}
+
+/* Payment Section */
+#payment {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: #bd850d;
+    border-radius: 10px;
+    margin: 2rem;
+}
+
+#payment h2 {
+    color: #472b02;
+    margin-bottom: 0.5rem;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.payment-card {
+    background: rgb(91, 56, 1);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.4);
+    width: 150px;
+}
+
+.payment-card img {
+    max-width: 100%;
+    height: 3cm;
+    border-radius: 5px;
+}
+
+/* Payment Card Hover */
+.payment-card:hover {
+    transform: scale(1.05);
+    background: #a69a9a;
+    box-shadow: 0 6px 15px rgba(163, 162, 162, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Payment Form Hover Effects */
+#paymentForm input:hover,
+#paymentForm select:hover {
+    border-color: #d4af37;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+#paymentForm input:focus,
+#paymentForm select:focus {
+    border-color: #d4af37;
+    background-color: rgba(255, 255, 255, 0.15);
+    outline: none;
+}
+
+#paymentForm .btn:hover {
+    background-color: #5c3e07;
+    transform: scale(1.03);
+}
+
+/* Contact Form */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 4rem;
+}
+
+.contact input,
+.contact textarea {
+    border: 3px solid #ccc;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.btn {
+    background-color: rgb(215, 175, 138);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(189, 150, 117);
+}
+
+/* Footer - corrected */
+footer {
+    width: 100%;
+    background-color: #5c4c15;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 0;
+    position: relative;
+    clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #f5f5f5;
+    max-width: 90%;
+}

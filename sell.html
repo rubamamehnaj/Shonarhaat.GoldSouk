@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sell Gold - ShonarHaat</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    section {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    video, img {
+      width: 300px;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    .btn {
+      margin: 15px;
+    }
+    #predicted-price {
+      font-size: 1.3rem;
+      color: gold;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 style="font-family:'Futura, gotham'; font-weight: 700;">ShonarHaat</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="sell.html">Sell</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <h2>Sell Your Gold Jewellery</h2>
+  </header>
+
+  <section>
+    <p>Scan or upload your gold item below to get an estimated price:</p>
+
+    <video id="video" autoplay></video><br>
+    <button class="btn" onclick="captureImage()">Capture from Camera</button><br>
+
+    <input type="file" id="fileInput" accept="image/*" class="btn"><br>
+    <img id="preview" style="display:none; width:300px; border-radius:10px; margin: 1rem auto; display: block;">
+
+
+    <button class="btn" onclick="predictGoldPrice()">Get Predicted Price</button>
+    <p id="predicted-price"></p>
+  </section>
+
+  <footer>
+    <p class="footer">GoldSouk.ShonarHaat<br>Bangladesh</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

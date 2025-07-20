@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Freehand&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <h1 class="roboto-regular">Payment</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="payment.html">Payment</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section id="payment">
+    <h2>Online Payment Options</h2>
+    <p>Pay securely using your preferred method.</p>
+    <div class="payment-options">
+      <div class="payment-card">
+        <img src="image/v.master" alt="Visa"/>
+        <p>Visa & Mastercard</p>
+      </div>
+      <div class="payment-card">
+        <img src="image/bkash.png" alt="bKash" style="background: white; padding: 10px; border-radius: 8px;"/>
+        <p>bKash Mobile Payment</p>
+      </div>
+    </div>
+
+    <form id="paymentForm" style="margin-top: 2rem;">
+      <label for="method">Select Payment Method:</label><br>
+      <select id="method" name="method" required style="margin: 10px; padding: 10px; border-radius: 5px;">
+        <option value="">--Select--</option>
+        <option value="Visa/Mastercard">Visa/Mastercard</option>
+        <option value="bKash">bKash</option>
+      </select><br>
+
+      <label for="number">Card / bKash Number:</label><br>
+      <input type="text" id="number" name="number" placeholder="Enter card or bKash number" required style="margin: 10px; padding: 10px; border-radius: 5px; max-width: 300px; width: 90%;"><br>
+
+      <label for="pin">PIN:</label><br>
+      <input type="password" id="pin" name="pin" placeholder="Enter PIN" required style="margin: 10px; padding: 10px; border-radius: 5px; max-width: 300px; width: 90%;"><br>
+
+      <button type="submit" class="btn">Confirm Payment</button>
+    </form>
+
+    <p id="paymentMessage" style="margin-top: 1rem; color: lightgreen; font-weight: bold;"></p>
+  </section>
+
+  <footer>
+    <p class="footer">GoldSouk.ShonarHaat <br>Bangladesh</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

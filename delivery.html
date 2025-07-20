@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delivery Details - ShonarHaat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 class="roboto-regular">Delivery Details</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="payment.html">Payment</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section id="payment">
+    <h2>Enter Your Delivery Details</h2>
+    <p>We require your address, phone, and transaction confirmation to complete delivery.</p>
+    <form id="deliveryForm" class="contact">
+      <input type="text" id="deliveryAddress" placeholder="Full Delivery Address" required />
+      <input type="tel" id="deliveryPhone" placeholder="Active Phone Number" required />
+      <input type="text" id="transactionId" placeholder="Transaction ID" required />
+      <input type="text" id="otpCode" placeholder="Enter OTP received" required />
+      <button type="submit" class="btn">Submit Delivery Details</button>
+    </form>
+  </section>
+
+  <footer>
+    <p class="footer">GoldSouk.ShonarHaat <br> Bangladesh</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

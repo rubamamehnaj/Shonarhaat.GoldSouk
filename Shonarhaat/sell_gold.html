@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sell Gold - ShonarHaat</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #3e2f1c;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+    }
+
+    header {
+      background: linear-gradient(to right, #d4af37, #806515);
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 30px;
+      text-align: center;
+    }
+
+    video, img {
+      width: 320px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .btn {
+      background-color: gold;
+      color: #3e2f1c;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 15px 0;
+    }
+
+    #predicted-price {
+      margin-top: 20px;
+      font-size: 20px;
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ShonarHaat</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="sell.html">Sell</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Sell Your Gold Jewellery</h2>
+    <p>Upload or scan your gold item to get a predicted price instantly!</p>
+
+    <!-- Camera -->
+    <video id="video" autoplay></video><br />
+    <button class="btn" onclick="captureImage()">Capture from Camera</button>
+
+    <!-- File Upload -->
+    <input type="file" accept="image/*" id="fileInput" onchange="previewImage(event)" class="btn"/><br />
+    <img id="preview" src="#" alt="Preview" style="display: none;" />
+
+    <!-- Predict -->
+    <button class="btn" onclick="predictGoldPrice()">Get Predicted Price</button>
+    <p id="predicted-price"></p>
+  </section>
+
+  <script>
+    // Enable camera preview
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => {
+        document.getElementById('video').srcObject = stream;
+      })
+      .catch(err => {
+        console.error("Camera access denied:", err);
+      });
+
+    function captureImage() {
+      const video = document.getElementById('video');
+      const canvas = document.createElement('canvas');
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      canvas.getContext('2d').drawImage(video, 0, 0);
+      const dataUrl = canvas.toDataURL('image/png');
+      showPreview(dataUrl);
+    }
+
+    function previewImage(event) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        showPreview(reader.result);
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+
+    function showPreview(src) {
+      const preview = document.getElementById('preview');
+      preview.src = src;
+      preview.style.display = 'block';
+    }
+
+    function predictGoldPrice() {
+      // Replace with your real model or API call later
+      const randomPrice = (Math.random() * 100000).toFixed(2);
+      document.getElementById('predicted-price').innerText = 
+        "Estimated Price: ৳" + randomPrice;
+    }
+  </script>
+</body>
+</html>

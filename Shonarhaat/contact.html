@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Freehand&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: rgb(209, 157, 66);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="roboto-regular">Contact</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Product List</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Contact Form Section -->
+  <section class="contact" id="contact">
+    <h1 class="freehand-regular">Write to Us</h1>
+    <form id="yourFormId">
+      <!-- Name Field -->
+      <div class="fullname">
+        <input type="text" id="name" class="name" placeholder="Your Name">
+      </div>
+
+      <!-- Phone Field -->
+      <div class="phone">
+        <input type="tel" id="phonenumber" class="phonenumber" placeholder="Cell Phone">
+      </div>
+
+      <!-- Email Field -->
+      <div class="emailid">
+        <input type="email" id="emaddress" class="emaddress" placeholder="Email">
+      </div>
+
+      <!-- Venue Field -->
+      <div class="venue">
+        <input type="text" id="venue" class="venue" placeholder="Venue">
+      </div>
+
+      <!-- Message Field -->
+      <div class="messager_l">
+        <textarea class="messager_r" id="messager_r" placeholder="Message"></textarea>
+      </div>
+
+      <!-- Submit Button with Wrapper -->
+      <div class="button-wrapper">
+        <button type="submit" class="btn">SEND MESSAGE</button>
+      </div>
+    </form>
+  </section>
+
+  <script src="style.js"></script>
+
+  <footer>
+    <p class="footer">
+      Rubama Mehnaj <br>
+      Independent University, Bangladesh
+    </p>
+  </footer>
+
+</body>
+</html>
